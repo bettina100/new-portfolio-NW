@@ -1,0 +1,212 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+ .profile__portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+  .profile {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .profile {
+    float: left;
+  }
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    grid-gap: 20px;;
+  }
+  
+  .grid .grid__item {
+      background-color: lightgray;
+      color: white;
+      text-align: center;
+      min-height: 100 px;
+      
+    }
+    
+    .social-media {
+    max-width: 70px;  
+    margin: auto
+  }
+  .container {
+    max-width: 70px;
+    margin:auto
+  }
+  
+  body {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+  }
+  .page-footer {
+        clear: both;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    * {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      
+    }
+  h1 {
+    font-size: 30px;
+    font-weight:700;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  a {
+      color: #357b70;
+    }
+    
+    a:hover, a:focus {
+      /* No underlining when hovering over a link */
+      text-decoration: none;
+    }
+    a:visited {
+      /* visited link */
+      color: #05676e;
+    }
+    
+    a:active {
+      /* selected link */
+      color: #489c79;
+    }
+    button:hover, button:focus
+    {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+          .button {
+            /* overwrites browser defaults */
+            /* resets the border */
+            border: none;
+            display: inline-block;
+            /* takes the font from the outer container */
+            font-family: inherit;
+            /* style button */
+            background-color: #357b70;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 3px;
+            /* width of the border, type, color */
+            border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+            -webkit-transition: opacity 0.2s;
+            -o-transition: opacity 0.2s;
+            transition: opacity 0.2s;
+          }
+          button {
+            /* overwrites browser defaults */
+            /* resets the border */
+            border: none;
+            display: inline-block;
+            /* takes the font from the outer container */
+            font-family: inherit;
+            /* style button */
+            background-color: #357b70;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 3px;
+            /* width of the border, type, color */
+            border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+            -webkit-transition: opacity 0.2s;
+            -o-transition: opacity 0.2s;
+            transition: opacity 0.2s;
+          }  
+  
+          button:hover,
+          button:focus,
+          .button:hover,
+          .button:focus {
+          /* lets the mouse appear as a hand when hovering over the button */
+          cursor: pointer;
+          /* reduces the opacity of the button to 80% */
+          opacity: 0.8;
+          }
+   
+          @-webkit-keyframes color-change {
+            0% {
+              fill: #edc655;
+            }
+            50% {
+              fill: #fcffad;
+            }
+            100% {
+              fill: #f76414;
+            }
+          }
+   
+          @keyframes color-change {
+            0% {
+              fill: #edc655;
+            }
+            50% {
+              fill: #fcffad;
+            }
+            100% {
+              fill: #f76414;
+            }
+          }
+  
+          .sun {
+            -webkit-animation: 4s color-change infinite alternate linear;
+                    animation: 4s color-change infinite alternate linear;
+          }    
+    @media all and (max-width: 500px) {
+        .grid {
+          -ms-grid-columns: 1fr;
+          grid-template-columns: 1fr;
+        }
+          }
+  
+    @media all and (min-width: 500px) and (max-width: 750px){
+      .grid {
+        -ms-grid-columns: 1fr 10px 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+      }
+  
+    @media all and (max-width: 750px) {
+      .grid {
+        grid-gap: 10px;
+        }  
+      .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+      }
+      h1 {
+        font-size: 22px;
+      }
+    }
+  }

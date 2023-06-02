@@ -1,0 +1,174 @@
+:root {
+ --a-color: #357b70;
+ --v-color: #05676e;
+ --active-color: #489c79;
+ --border-bottom: rgba(0, 0, 0, 0.3);
+ --keyframe-fill: #edc655;
+ --keyframe-fill50: #fcffad;
+ --keyframe-fill100: #f76414;
+ --font-weight: 700;
+}
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+ .profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.profile {
+  float: left;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  grid-gap: 20px;;
+}
+
+.grid .grid__item {
+    background-color: lightgray;
+    color: white;
+    text-align: center;
+    min-height: 100 px;
+    
+  }
+  
+  .social-media {
+  max-width: 70px;  
+  margin: auto
+}
+.container {
+  max-width: 70px;
+  margin:auto
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+}
+.page-footer {
+      clear: both;
+      display: flex;
+    }
+  * {
+    box-sizing: border-box;
+    
+  }
+h1 {
+  font-size: 30px;
+  font-weight:var(--font-weight);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--font-weight);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--font-weight);
+}
+a {
+    color: var(--a-color);
+  }
+  
+  a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+  a:visited {
+    /* visited link */
+    color: var(--v-color);
+  }
+  
+  a:active {
+    /* selected link */
+    color: var(--active-color);
+  }
+  button:hover, button:focus
+  {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+        .button, button {
+          /* overwrites browser defaults */
+          /* resets the border */
+          border: none;
+          display: inline-block;
+          /* takes the font from the outer container */
+          font-family: inherit;
+          /* style button */
+          background-color: var(--a-color);
+          color: white;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 3px;
+          /* width of the border, type, color */
+          border-bottom: 2px solid var(--border-bottom);
+          transition: opacity 0.2s;
+        }  
+
+        button:hover,
+        button:focus,
+        .button:hover,
+        .button:focus {
+        /* lets the mouse appear as a hand when hovering over the button */
+        cursor: pointer;
+        /* reduces the opacity of the button to 80% */
+        opacity: 0.8;
+        }
+ 
+        @keyframes color-change {
+          0% {
+            fill: var(--keyframe-fill);
+          }
+          50% {
+            fill: var(--keyframe-fill50);
+          }
+          100% {
+            fill: var(--keyframe-fill100);
+          }
+        }
+
+        .sun {
+          animation: 4s color-change infinite alternate linear;
+        }    
+  @media all and (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+        }
+
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+      }  
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
+}
